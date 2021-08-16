@@ -1,0 +1,6 @@
+framework module Pods_VideoSDKDemo {
+  umbrella header "Pods-VideoSDKDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,24 @@
+PODS:
+  - mediasoup_ios_client (1.5.4)
+  - Starscream (3.0.2)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - mediasoup_ios_client (~> 1.5.4)
+  - Starscream (= 3.0.2)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - mediasoup_ios_client
+    - Starscream
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  mediasoup_ios_client: b7ff4fe25cf2069cfa04a63690b0cdcdd4a4822c
+  Starscream: b512c62f6706421221b5ceb2ba01a9f58aca5bea
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: ce30863c99641d6a1568e826c648fe11dac96090
+
+COCOAPODS: 1.10.1
