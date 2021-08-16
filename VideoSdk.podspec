@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 # 1
 s.platform = :ios
 s.ios.deployment_target = '12.0'
-s.name = "VideoSdkDemo"
+s.name = "VideoSdk"
 s.summary = "Videosdk is used for end to end video calls"
 s.requires_arc = true
 
@@ -33,7 +33,7 @@ s.dependency 'mediasoup_ios_client', "~> 1.5.4"
 s.source_files = "VideoSDKDemo/**/*.{swift}"
 
 # 9
-s.resources = "VideoSDKDemo/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+#s.resources = "VideoSDKDemo/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
 s.swift_version = "5.0"
