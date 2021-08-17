@@ -40,5 +40,4 @@ s.source_files = "VideoSDK/**/*.{h}"
 # 10
 s.swift_version = "5.0"
 
-s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'VideoSDK/BridgingHeader/VideoSDKDemo-BridgingHeader.h' }
 end
