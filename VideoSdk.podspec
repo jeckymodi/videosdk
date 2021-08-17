@@ -5,7 +5,7 @@ s.platform = :ios
 s.ios.deployment_target = '13.0'
 s.name = "VideoSdk"
 s.summary = "Videosdk is used for end to end video calls"
-s.requires_arc = true
+s.requires_arc = false
 
 # 2
 s.version = "0.1.0"
@@ -24,7 +24,7 @@ s.source = { :git => "https://github.com/jeckymodi/videosdk.git",
              :tag => "#{s.version}" }
 
 # 7
-s.framework = "UIKit"
+s.framework = "UIKit", "AVFoundation", "AudioToolbox", "CoreAudio", "CoreMedia", "CoreVideo"
 s.dependency 'Starscream', '3.1.0'
 s.dependency 'SwiftyJSON'
 s.dependency 'mediasoup_ios_client'
@@ -39,5 +39,19 @@ s.source_files = "VideoSDK/**/*.{h}"
 
 # 10
 s.swift_version = "5.0"
+
+s.pod_target_xcconfig = {
+    "USE_HEADERMAP" => "NO",
+    "ALWAYS_SEARCH_USER_PATHS" => "NO",
+    "CLANG_CXX_LANGUAGE_STANDARD" => "c++14",
+    "CLANG_CXX_LIBRARY" => "libc++",
+    "OTHER_CPLUSPLUSFLAGS" => '"-stdlib=libc++" "-Wall" "-Wextra" "-Wpedantic"',
+    "VALID_ARCHS" => "$(ARCHS_STANDARD_64_BIT)",
+    "OTHER_LD_FLAGS" => "-all_load",
+  }
+
+s.vendored_frameworks = "Pods/mediasoup_ios_client/build/mediasoup_client_ios.framework", "Pods/mediasoup_ios_client/mediasoup-client-ios/dependencies/webrtc/src/out_ios_libs/WebRTC.framework"
+
+s.module_map = "Pods/mediasoup_ios_client/mediasoup-client-ios/mediasoup_ios_client.modulemap"
 
 end
