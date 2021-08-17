@@ -30,7 +30,7 @@ s.dependency 'SwiftyJSON'
 s.dependency 'mediasoup_ios_client'
 
 # 8
-s.source_files = "VideoSDK/*.{swift}"
+s.source_files = "VideoSDK/*.{swift,h}"
 s.source_files = "VideoSDK/**/**/**/*.{swift}"
 s.public_header_files = 'VideoSDK/BridgingHeader/VideoSDKDemo-BridgingHeader.h'
 
