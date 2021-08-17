@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWJ-pZ-dFA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="k3v-Qx-q1u">
+            <objects>
+                <viewController title="Main" id="WWJ-pZ-dFA" customClass="ViewController" customModule="VideoSDKDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bTP-0p-hXb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-kw-irc">
+                                <rect key="frame" x="8" y="807" width="96" height="30"/>
+                                <state key="normal" title="Resume Local">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWT-0R-N0P" customClass="RTCEAGLVideoView">
+                                <rect key="frame" x="0.0" y="44" width="160" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="BRi-2y-8pB"/>
+                                    <constraint firstAttribute="height" constant="120" id="O4f-Fy-mpx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3I-Bo-00o" customClass="RTCEAGLVideoView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r01-8k-mM1">
+                                <rect key="frame" x="258" y="767" width="148" height="30"/>
+                                <state key="normal" title="Pause Remote Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7y-qc-eya">
+                                <rect key="frame" x="244" y="807" width="162" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="Flx-qV-q1Y"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tav-wK-ZOv"/>
+                                </constraints>
+                                <state key="normal" title="Resume Remote Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-kp-RTq">
+                                <rect key="frame" x="316" y="710" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="btnClose_Click:" destination="WWJ-pZ-dFA" eventType="touchUpInside" id="pxW-6G-sXl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPC-Ko-Bac">
+                                <rect key="frame" x="8" y="767" width="82" height="30"/>
+                                <state key="normal" title="Pause Local">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lfq-BB-Qro"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5h6-kw-irc" firstAttribute="top" secondItem="WPC-Ko-Bac" secondAttribute="bottom" constant="10" id="1yt-ac-vMx"/>
+                            <constraint firstItem="5h6-kw-irc" firstAttribute="leading" secondItem="lfq-BB-Qro" secondAttribute="leading" constant="8" id="3ka-rA-FdD"/>
+                            <constraint firstItem="WPC-Ko-Bac" firstAttribute="leading" secondItem="lfq-BB-Qro" secondAttribute="leading" constant="8" id="6hK-xP-3dZ"/>
+                            <constraint firstItem="hWT-0R-N0P" firstAttribute="top" secondItem="lfq-BB-Qro" secondAttribute="top" id="DMi-GU-eQm"/>
+                            <constraint firstItem="lfq-BB-Qro" firstAttribute="bottom" secondItem="r01-8k-mM1" secondAttribute="bottom" constant="65" id="E3e-LS-m7y"/>
+                            <constraint firstItem="lfq-BB-Qro" firstAttribute="trailing" secondItem="g7y-qc-eya" secondAttribute="trailing" constant="8" id="I7H-Lv-I2y"/>
+                            <constraint firstItem="P3I-Bo-00o" firstAttribute="leading" secondItem="lfq-BB-Qro" secondAttribute="leading" id="OPP-Ti-HK9"/>
+                            <constraint firstAttribute="bottom" secondItem="P3I-Bo-00o" secondAttribute="bottom" id="Pgj-g8-hRq"/>
+                            <constraint firstItem="lfq-BB-Qro" firstAttribute="trailing" secondItem="CGa-kp-RTq" secondAttribute="trailing" constant="59" id="RkP-pd-9p6"/>
+                            <constraint firstItem="r01-8k-mM1" firstAttribute="top" secondItem="CGa-kp-RTq" secondAttribute="bottom" constant="27" id="VG3-qu-cvz"/>
+                            <constraint firstItem="lfq-BB-Qro" firstAttribute="trailing" secondItem="r01-8k-mM1" secondAttribute="trailing" constant="8" id="eHx-Xn-UNO"/>
+                            <constraint firstItem="hWT-0R-N0P" firstAttribute="leading" secondItem="lfq-BB-Qro" secondAttribute="leading" id="mVS-Ho-b9z"/>
+                            <constraint firstItem="lfq-BB-Qro" firstAttribute="bottom" secondItem="g7y-qc-eya" secondAttribute="bottom" constant="25" id="qB9-2f-vBw"/>
+                            <constraint firstItem="P3I-Bo-00o" firstAttribute="top" secondItem="lfq-BB-Qro" secondAttribute="top" id="yf5-ep-4d3"/>
+                            <constraint firstItem="lfq-BB-Qro" firstAttribute="bottom" secondItem="5h6-kw-irc" secondAttribute="bottom" constant="25" id="zi1-2U-jxs"/>
+                            <constraint firstItem="P3I-Bo-00o" firstAttribute="trailing" secondItem="lfq-BB-Qro" secondAttribute="trailing" id="zlv-cM-fNf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="localVideoView" destination="hWT-0R-N0P" id="xmZ-2z-KzC"/>
+                        <outlet property="pauseLocalButton" destination="WPC-Ko-Bac" id="aSQ-6o-HCl"/>
+                        <outlet property="pauseRemoteButton" destination="r01-8k-mM1" id="ity-Tn-tku"/>
+                        <outlet property="remoteVideoView" destination="P3I-Bo-00o" id="tla-YD-Qe7"/>
+                        <outlet property="resumeLocalButton" destination="5h6-kw-irc" id="Uhh-BO-aPm"/>
+                        <outlet property="resumeRemoteButton" destination="g7y-qc-eya" id="28W-3C-32H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3O-br-WZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
