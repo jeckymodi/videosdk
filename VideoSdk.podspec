@@ -40,18 +40,5 @@ s.source_files = "VideoSDK/**/*.{h}"
 # 10
 s.swift_version = "5.0"
 
-s.pod_target_xcconfig = {
-    "USE_HEADERMAP" => "NO",
-    "ALWAYS_SEARCH_USER_PATHS" => "NO",
-    "CLANG_CXX_LANGUAGE_STANDARD" => "c++14",
-    "CLANG_CXX_LIBRARY" => "libc++",
-    "OTHER_CPLUSPLUSFLAGS" => '"-stdlib=libc++" "-Wall" "-Wextra" "-Wpedantic"',
-    "VALID_ARCHS" => "$(ARCHS_STANDARD_64_BIT)",
-    "OTHER_LD_FLAGS" => "-all_load",
-  }
-
-s.vendored_frameworks = "Pods/mediasoup_ios_client/build/mediasoup_client_ios.framework", "Pods/mediasoup_ios_client/mediasoup-client-ios/dependencies/webrtc/src/out_ios_libs/WebRTC.framework"
-
-s.module_map = "Pods/mediasoup_ios_client/mediasoup-client-ios/mediasoup_ios_client.modulemap"
-
+s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'VideoSDK/BridgingHeader/VideoSDKDemo-BridgingHeader.h' }
 end
