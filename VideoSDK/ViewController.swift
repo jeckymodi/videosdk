@@ -321,8 +321,8 @@ class ViewController : UIViewController, GetCosumerVideoTrack {
         print("initializeMediasoup() client initialized")
         
         // Set mediasoup log
-        Logger.setLogLevel(LogLevel.WARN)
-        Logger.setDefaultHandler()
+//        Logger.setLogLevel(LogLevel.WARN)
+//        Logger.setDefaultHandler()
     }
     
     private func displayLocalVideo() {
