@@ -1,0 +1,36 @@
+{
+  "name": "VideoSdk",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "summary": "Videosdk is used for end to end video calls",
+  "requires_arc": true,
+  "version": "0.1.0",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jecky633": "modijecky@live.com"
+  },
+  "homepage": "https://github.com/jeckymodi/videosdk",
+  "source": {
+    "git": "https://github.com/jeckymodi/videosdk.git",
+    "tag": "0.1.0"
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Starscream": [
+      "3.1.0"
+    ],
+    "SwiftyJSON": [
+
+    ],
+    "mediasoup_ios_client": [
+
+    ]
+  },
+  "source_files": "VideoSDK/**/*.{h}",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}

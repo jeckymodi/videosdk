@@ -26,12 +26,13 @@ s.source = { :git => "https://github.com/jeckymodi/videosdk.git",
 # 7
 s.framework = "UIKit"
 s.dependency 'Starscream', '3.1.0'
-s.dependency 'SwiftyJSON', '~> 4.0'
-s.dependency 'mediasoup_ios_client', "~> 1.5.4"
+s.dependency 'SwiftyJSON'
+s.dependency 'mediasoup_ios_client'
 
 # 8
 s.source_files = "VideoSDK/*.{swift}"
 s.source_files = "VideoSDK/**/**/**/*.{swift}"
+s.source_files = "VideoSDK/**/*.{h}"
 
 # 9
 #s.resources = "VideoSDKDemo/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
