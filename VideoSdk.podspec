@@ -32,7 +32,6 @@ s.dependency 'mediasoup_ios_client'
 # 8
 s.source_files = "VideoSDK/*.{swift}"
 s.source_files = "VideoSDK/**/**/**/*.{swift}"
-s.source_files = "VideoSDK/**/*.{h}"
 
 # 9
 #s.resources = "VideoSDKDemo/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
